@@ -15,7 +15,7 @@ didNotMatch = 0
 noDataMatch = 0
 total = 0
 
-with open("Num_operator.csv", newline='') as csvfile:
+with open("Num_operator.csv", newline='' , encoding="utf-8") as csvfile:
     reader = csv.DictReader(csvfile,delimiter=",")
     for row in reader:
         num = row['num']
