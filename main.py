@@ -49,19 +49,19 @@ with open("Num_operator.csv", newline='' , encoding="utf-8") as csvfile:
                 writer = csv.writer(file)
                 writer.writerow((num, operD, operR, dataMatch,operB))
         else:
-         operR = responceJson['0']['operator']
-         if operR == operD:
-           dataMatch = 1
-           Matched += 1
-           with open("data.csv", "a") as file:
-             writer = csv.writer(file)
-             writer.writerow((num,operD,operR,dataMatch,operB))
-         else:
-          dataMatch = 0
-          didNotMatch += 1
-          with open("data.csv", "a") as file:
-            writer = csv.writer(file)
-            writer.writerow((num, operD, operR, dataMatch,operB))
+            operR = responceJson['0']['operator']
+            if operR == operD:
+               dataMatch = 1
+               Matched += 1
+               with open("data.csv", "a") as file:
+                    writer = csv.writer(file)
+                    writer.writerow((num,operD,operR,dataMatch,operB))
+            else:
+                   dataMatch = 0
+                   didNotMatch += 1
+                   with open("data.csv", "a") as file:
+                       writer = csv.writer(file)
+                       writer.writerow((num, operD, operR, dataMatch,operB))
 total = Matched + didNotMatch + noDataMatch
 
 
